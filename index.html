@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radar Global — Estudos Contemporâneos UNAERP 2026</title>
+  <meta name="description" content="Site crítico-reflexivo sobre temas contemporâneos globais: Globalização, Corrupção, Pobreza, Sustentabilidade e muito mais." />
+  <meta name="author" content="Rodrigo Amaro & David Camara — UNAERP 2026/01" />
+  <meta property="og:title" content="Radar Global" />
+  <meta property="og:description" content="Reflexões críticas sobre os grandes temas que moldam o mundo contemporâneo." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-side nav-side-left">
+      <button class="btn-theme" id="theme-toggle" aria-label="Alternar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+    <a href="#home" class="nav-logo">
+      Radar
+      <svg class="nav-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      Global
+    </a>
+    <div class="nav-side nav-side-right"></div>
+  </div>
+</nav>
+
+<!-- Side nav fixo — nova ordem -->
+<aside class="side-nav" id="side-nav">
+  <a href="#conceitos"   class="snav-link" data-section="conceitos">Conceitos</a>
+  <a href="#casos"       class="snav-link" data-section="casos">Casos</a>
+  <a href="#midia"       class="snav-link" data-section="midia">Mídia</a>
+  <a href="#ongs"        class="snav-link" data-section="ongs">ONGs</a>
+  <a href="#sobre"       class="snav-link" data-section="sobre">O Grupo</a>
+  <a href="#referencias" class="snav-link" data-section="referencias">Referências</a>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════ HERO -->
+<section class="hero" id="home">
+  <div class="carousel" id="carousel">
+    <div class="carousel-slide active" style="background-image:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?w=1600&q=80')"></div>
+    <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1600&q=80')"></div>
+    <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1600&q=80')"></div>
+    <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&q=80')"></div>
+    <div class="carousel-slide" style="background-image:url('https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=1600&q=80')"></div>
+    <div class="carousel-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>
+      UNAERP · Estudos Contemporâneos 2026/01
+    </div>
+    <h1 class="hero-title">Radar<br>Global</h1>
+    <p class="hero-sub">Reflexões críticas sobre os grandes temas que moldam o mundo — globalização, corrupção, pobreza e sustentabilidade sob um olhar acadêmico e humano.</p>
+  </div>
+  <div class="carousel-dots" id="dots"></div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CONCEITOS — seção 01 -->
+<section class="section conceitos" id="conceitos">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-label"><span class="label-num">01</span>Conceitos Fundamentais</p>
+      <h2 class="section-title">Entendendo o Mundo</h2>
+      <p class="section-sub">Definições críticas dos principais conceitos que norteiam o debate sobre a realidade contemporânea.</p>
+    </div>
+    <div class="accordion-list" id="accordion-list">
+
+      <div class="accordion-item reveal">
+        <button class="accordion-trigger">
+          <span class="acc-num">01</span>
+          Globalização
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>A globalização é o processo de integração econômica, política, social e cultural entre diferentes nações e povos, intensificado a partir do final do século XX. Impulsionada pela revolução tecnológica, pela liberalização do comércio e pelo fluxo de capitais, ela aproxima mercados, culturas e informações em escala planetária.</p>
+            <p style="margin-top:12px">Seus efeitos são profundamente ambíguos: ao mesmo tempo que promove desenvolvimento, acesso a tecnologias e intercâmbio cultural, aprofunda desigualdades, homogeneíza culturas locais e transfere poder decisório para grandes corporações e organismos supranacionais, esvaziando a soberania dos Estados-nação.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal reveal-delay-1">
+        <button class="accordion-trigger">
+          <span class="acc-num">02</span>
+          Nova Ordem Mundial
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>A expressão "Nova Ordem Mundial" designa a reconfiguração das relações de poder no cenário internacional, especialmente após o fim da Guerra Fria (1991). Com a dissolução da bipolaridade EUA-URSS, emerge uma ordem multipolar disputada entre grandes potências como Estados Unidos, China, Rússia e blocos regionais emergentes.</p>
+            <p style="margin-top:12px">Esse novo arranjo geopolítico é marcado por tensões entre hegemonias tradicionais e potências emergentes, pelo crescente papel de atores não-estatais (ONGs, corporações, movimentos sociais transnacionais) e pela disputa por influência tecnológica, militar e econômica em escala global.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal reveal-delay-2">
+        <button class="accordion-trigger">
+          <span class="acc-num">03</span>
+          Corrupção
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>A corrupção é o abuso de poder público ou privado para obtenção de vantagens indevidas, em detrimento do interesse coletivo. Manifestada em suborno, desvio de recursos, nepotismo e lavagem de dinheiro, ela corrói as instituições democráticas, distorce a alocação de recursos públicos e perpetua a desigualdade social.</p>
+            <p style="margin-top:12px">Segundo o Banco Mundial, a corrupção compromete trilhões de dólares em recursos anuais que deveriam financiar saúde, educação e infraestrutura. O combate a ela exige transparência, controle social, fortalecimento institucional e uma cultura de integridade pública e privada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal reveal-delay-3">
+        <button class="accordion-trigger">
+          <span class="acc-num">04</span>
+          Políticas Públicas
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>Políticas públicas são conjuntos de decisões, programas e ações que o Estado realiza para responder a demandas e necessidades sociais. Abrangem saúde, educação, habitação, segurança, meio ambiente e economia — constituindo o principal instrumento pelo qual o governo materializa direitos e deveres estabelecidos pela Constituição.</p>
+            <p style="margin-top:12px">A qualidade das políticas públicas depende da capacidade institucional, da participação cidadã, da integridade dos gestores e da disponibilidade de recursos. Políticas eficazes são baseadas em evidências, avaliadas continuamente e orientadas para resultados mensuráveis de bem-estar social.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal">
+        <button class="accordion-trigger">
+          <span class="acc-num">05</span>
+          Estado / Governo
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>O Estado é a organização política soberana que detém o monopólio legítimo da força sobre um território e população definidos, sendo composto por três elementos: território, povo e soberania. O Governo, por sua vez, é o conjunto de órgãos e agentes que exercem temporariamente as funções estatais, variando conforme o regime político.</p>
+            <p style="margin-top:12px">Na contemporaneidade, o Estado enfrenta desafios crescentes: pressão de organismos internacionais que limitam sua soberania, demandas por maior eficiência e transparência, erosão da confiança pública e a necessidade de se adaptar a uma sociedade em rápida transformação tecnológica e social.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal reveal-delay-1">
+        <button class="accordion-trigger">
+          <span class="acc-num">06</span>
+          Pobreza
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>A pobreza é uma condição multidimensional de privação que vai muito além da falta de renda. Abrange a ausência de acesso a alimentação adequada, saneamento, saúde, educação, moradia digna e participação política. O Banco Mundial define pobreza extrema como viver com menos de US$ 2,15 por dia (PPP), mas índices como o IPM capturam melhor sua complexidade.</p>
+            <p style="margin-top:12px">As causas da pobreza são estruturais: desigualdade de oportunidades, discriminação, herança histórica de colonialismo, ausência de proteção social e concentração de riqueza. Combatê-la exige não apenas transferência de renda, mas transformação das estruturas econômicas e sociais que a reproduzem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal reveal-delay-2">
+        <button class="accordion-trigger">
+          <span class="acc-num">07</span>
+          Dimensões da Sustentabilidade
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>A sustentabilidade, no sentido contemporâneo, articula três dimensões interdependentes — a tríade "triple bottom line" (Elkington, 1994):</p>
+            <ul style="margin-top:12px; padding-left:16px; display:flex; flex-direction:column; gap:8px; list-style:disc;">
+              <li><strong>Dimensão Ambiental:</strong> uso responsável dos recursos naturais, preservação da biodiversidade, controle de emissões e reversão das mudanças climáticas.</li>
+              <li><strong>Dimensão Social:</strong> garantia de equidade, acesso a direitos básicos, redução das desigualdades e fortalecimento das comunidades.</li>
+              <li><strong>Dimensão Econômica:</strong> geração de valor de forma justa e duradoura, sem comprometer as gerações futuras nem explorar trabalhadores ou territórios.</li>
+            </ul>
+            <p style="margin-top:12px">Os 17 ODS (Objetivos de Desenvolvimento Sustentável) da ONU sintetizam a agenda global para 2030, integrando essas três dimensões em um programa de ação universal.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CASOS — seção 02 (TIMELINE) -->
+<section class="section casos" id="casos">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-label"><span class="label-num">02</span>Casos de Sucesso</p>
+      <h2 class="section-title">Casos de Sucesso</h2>
+      <p class="section-sub">Países que enfrentaram com êxito os desafios contemporâneos — do combate à corrupção à sustentabilidade radical.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item tl-left reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-flag-row">
+            <span class="tl-flag">🇪🇪</span>
+            <div>
+              <p class="tl-country">Estônia · Governo Digital</p>
+              <h3 class="tl-title">E-Governance: Transparência Total</h3>
+            </div>
+          </div>
+          <p class="tl-desc">A Estônia digitalizou 99% de seus serviços públicos com identidade digital única. Qualquer consulta indevida a dados cidadãos é registrada e punível automaticamente.</p>
+          <div class="tl-result">📉 18º país mais íntegro — IPC 2023 (Transparency International)</div>
+        </div>
+      </div>
+
+      <div class="timeline-item tl-right reveal reveal-delay-1">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-flag-row">
+            <span class="tl-flag">🇷🇼</span>
+            <div>
+              <p class="tl-country">Ruanda · Combate à Corrupção</p>
+              <h3 class="tl-title">Reconstrução com Integridade</h3>
+            </div>
+          </div>
+          <p class="tl-desc">Após o genocídio de 1994, Ruanda ergueu tribunais comunitários (Gacaca), sistema anticorrupção robusto e aderiu ao Open Government Partnership.</p>
+          <div class="tl-result">🌱 Crescimento de 7,5% ao ano na última década com redução significativa da pobreza</div>
+        </div>
+      </div>
+
+      <div class="timeline-item tl-left reveal reveal-delay-2">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-flag-row">
+            <span class="tl-flag">🇧🇹</span>
+            <div>
+              <p class="tl-country">Butão · Sustentabilidade</p>
+              <h3 class="tl-title">Felicidade Interna Bruta</h3>
+            </div>
+          </div>
+          <p class="tl-desc">O Butão substituiu o PIB pela Felicidade Interna Bruta como métrica nacional. É o único país do mundo carbon-negative: absorve mais CO₂ do que emite.</p>
+          <div class="tl-result">🌿 72% do território coberto por florestas — garantido na Constituição</div>
+        </div>
+      </div>
+
+      <div class="timeline-item tl-right reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-flag-row">
+            <span class="tl-flag">🇧🇷</span>
+            <div>
+              <p class="tl-country">Brasil · Políticas Sociais</p>
+              <h3 class="tl-title">Bolsa Família: Referência Global</h3>
+            </div>
+          </div>
+          <p class="tl-desc">Transferência de renda condicional estudada em mais de 50 países. Combina alívio imediato com condicionalidades educacionais e de saúde, quebrando o ciclo intergeracional.</p>
+          <div class="tl-result">📚 +20 milhões saíram da pobreza extrema com elevação do desempenho escolar</div>
+        </div>
+      </div>
+
+      <div class="timeline-item tl-left reveal reveal-delay-1">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-flag-row">
+            <span class="tl-flag">🇩🇰</span>
+            <div>
+              <p class="tl-country">Dinamarca · Integridade Pública</p>
+              <h3 class="tl-title">O País Menos Corrupto do Mundo</h3>
+            </div>
+          </div>
+          <p class="tl-desc">Alta confiança institucional, salários competitivos para servidores, liberdade de imprensa robusta e forte cultura de integridade formam o modelo dinamarquês.</p>
+          <div class="tl-result">🏆 1º no IPC 2023 — 9/10 cidadãos confiam nas instituições públicas</div>
+        </div>
+      </div>
+
+      <div class="timeline-item tl-right reveal reveal-delay-2">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-flag-row">
+            <span class="tl-flag">🇨🇷</span>
+            <div>
+              <p class="tl-country">Costa Rica · Sustentabilidade</p>
+              <h3 class="tl-title">99% de Energia Renovável</h3>
+            </div>
+          </div>
+          <p class="tl-desc">Aboliu as Forças Armadas em 1949 e reinvestiu os recursos em educação e saúde. Opera com energia 99% renovável: hidroelétrica, geotérmica, solar e eólica.</p>
+          <div class="tl-result">⚡ Meta de carbono-neutralidade até 2050 com plano nacional aprovado</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ MÍDIA — seção 03 (PICKS EDITORIAIS) -->
+<section class="section midia" id="midia">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-label"><span class="label-num">03</span>Mídia Recomendada</p>
+      <h2 class="section-title">Nossa Seleção</h2>
+      <p class="section-sub">Músicas, documentários e palestras que ampliam a reflexão sobre os temas contemporâneos abordados pelo grupo.</p>
+    </div>
+
+    <div class="picks-list reveal">
+
+      <div class="pick-item">
+        <span class="pick-num">01</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Música</span>
+            <span class="pick-author">Black Eyed Peas</span>
+          </div>
+          <h3 class="pick-title">Where Is the Love?</h3>
+          <p class="pick-desc">Questiona a violência, o terrorismo, a indiferença social e a falta de empatia no mundo contemporâneo.</p>
+        </div>
+        <a class="pick-link" href="https://www.youtube.com/watch?v=WpYeekQkAdc" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">02</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Música</span>
+            <span class="pick-author">Michael Jackson</span>
+          </div>
+          <h3 class="pick-title">Earth Song</h3>
+          <p class="pick-desc">Crítica à destruição ambiental, às guerras e ao descaso da humanidade com o planeta e com os mais vulneráveis.</p>
+        </div>
+        <a class="pick-link" href="https://www.youtube.com/watch?v=XAi3VTSdTxU" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">03</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Música</span>
+            <span class="pick-author">Criolo</span>
+          </div>
+          <h3 class="pick-title">Bem-Vindo</h3>
+          <p class="pick-desc">Rap que denuncia as contradições sociais, a violência urbana e as promessas não cumpridas do desenvolvimento brasileiro.</p>
+        </div>
+        <a class="pick-link" href="https://www.youtube.com/watch?v=i2IqWtGp91A" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">04</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Documentário</span>
+            <span class="pick-author">Ava DuVernay · Netflix</span>
+          </div>
+          <h3 class="pick-title">13ª Emenda (13th)</h3>
+          <p class="pick-desc">Interseção de raça, justiça e encarceramento em massa nos EUA — como a escravidão persistiu sob outras formas legais.</p>
+        </div>
+        <a class="pick-link" href="https://www.netflix.com/title/80091741" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">05</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Documentário</span>
+            <span class="pick-author">Al Gore</span>
+          </div>
+          <h3 class="pick-title">Uma Verdade Inconveniente</h3>
+          <p class="pick-desc">Evidências das mudanças climáticas e o apelo urgente por uma mudança de comportamento global antes que seja tarde.</p>
+        </div>
+        <a class="pick-link" href="https://www.youtube.com/watch?v=Bu6SE5TYrCM" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">06</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Documentário</span>
+            <span class="pick-author">Michael Moore</span>
+          </div>
+          <h3 class="pick-title">Privatize Isso</h3>
+          <p class="pick-desc">Análise crítica do capitalismo financeiro global e suas consequências para trabalhadores e democracias ao redor do mundo.</p>
+        </div>
+        <a class="pick-link" href="https://www.youtube.com/watch?v=sISCADCkVBE" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">07</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Palestra · TED</span>
+            <span class="pick-author">Chimamanda Adichie</span>
+          </div>
+          <h3 class="pick-title">The Danger of a Single Story</h3>
+          <p class="pick-desc">Como narrativas unilaterais moldam percepções sobre povos, nações e pobreza — e por que diversidade de histórias importa.</p>
+        </div>
+        <a class="pick-link" href="https://www.youtube.com/watch?v=D9Ihs241zeg" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">08</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Palestra · TED</span>
+            <span class="pick-author">Hans Rosling</span>
+          </div>
+          <h3 class="pick-title">The Best Stats You've Ever Seen</h3>
+          <p class="pick-desc">Visualização de dados que destrói mitos sobre países em desenvolvimento e mostra como o mundo mudou nas últimas décadas.</p>
+        </div>
+        <a class="pick-link" href="https://www.youtube.com/watch?v=hVimVzgtD6w" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="pick-item">
+        <span class="pick-num">09</span>
+        <div class="pick-content">
+          <div class="pick-meta">
+            <span class="pick-type">Palestra · TED</span>
+            <span class="pick-author">Chido Nwangwu</span>
+          </div>
+          <h3 class="pick-title">How Corruption is Holding Back Africa</h3>
+          <p class="pick-desc">Como a corrupção sistêmica impede o desenvolvimento do continente africano e o que líderes e cidadãos podem fazer.</p>
+        </div>
+        <a class="pick-link" href="https://www.ted.com/talks" target="_blank" rel="noopener" aria-label="Acessar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ ONGs — seção 04 (TABELA COMPACTA) -->
+<section class="section ongs" id="ongs">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-label"><span class="label-num">04</span>Organizações de Referência</p>
+      <h2 class="section-title">Quem Está no Campo</h2>
+      <p class="section-sub">ONGs e organismos que lideram o combate à corrupção, à pobreza e pela sustentabilidade global.</p>
+    </div>
+
+    <div class="ongs-table reveal">
+
+      <div class="ong-row">
+        <div class="ong-row-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Combate à Corrupção
+        </div>
+        <div class="ong-row-links">
+          <a href="https://www.transparency.org" target="_blank" rel="noopener">Transparency International</a>
+          <a href="https://www.transparency.org.br" target="_blank" rel="noopener">Transparência Internacional — Brasil</a>
+          <a href="https://www.globalintegrity.org" target="_blank" rel="noopener">Global Integrity</a>
+          <a href="https://www.oas.org/pt/sga/ddi/" target="_blank" rel="noopener">OEA — Departamento de Integridade</a>
+        </div>
+      </div>
+
+      <div class="ong-row">
+        <div class="ong-row-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          Transparência Pública
+        </div>
+        <div class="ong-row-links">
+          <a href="https://www.opengovpartnership.org" target="_blank" rel="noopener">Open Government Partnership</a>
+          <a href="https://www.openknowledge.org" target="_blank" rel="noopener">Open Knowledge Foundation</a>
+          <a href="https://artigo19.org" target="_blank" rel="noopener">Artigo 19 Brasil</a>
+          <a href="https://contas.aberta.org.br" target="_blank" rel="noopener">Contas Abertas</a>
+        </div>
+      </div>
+
+      <div class="ong-row">
+        <div class="ong-row-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Estudos sobre Pobreza
+        </div>
+        <div class="ong-row-links">
+          <a href="https://www.oxfam.org.br" target="_blank" rel="noopener">Oxfam Brasil</a>
+          <a href="https://www.worldbank.org/pt/topic/poverty" target="_blank" rel="noopener">Banco Mundial — Pobreza</a>
+          <a href="https://www.povertyactionlab.org" target="_blank" rel="noopener">J-PAL (MIT)</a>
+          <a href="https://www.actionagainsthunger.org" target="_blank" rel="noopener">Action Against Hunger</a>
+        </div>
+      </div>
+
+      <div class="ong-row">
+        <div class="ong-row-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Proteção Ambiental
+        </div>
+        <div class="ong-row-links">
+          <a href="https://www.wwf.org.br" target="_blank" rel="noopener">WWF Brasil</a>
+          <a href="https://www.greenpeace.org.br" target="_blank" rel="noopener">Greenpeace Brasil</a>
+          <a href="https://www.imazon.org.br" target="_blank" rel="noopener">Imazon</a>
+          <a href="https://www.sosma.org.br" target="_blank" rel="noopener">SOS Mata Atlântica</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ QUEM SOMOS — seção 05 (fechamento) -->
+<section class="section sobre" id="sobre">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-label"><span class="label-num">05</span>O Grupo</p>
+      <h2 class="section-title">Quem Somos</h2>
+      <p class="section-sub">Estudantes da UNAERP comprometidos em compreender e debater os fenômenos que definem o mundo contemporâneo.</p>
+    </div>
+    <div class="members-grid">
+      <div class="member-card reveal reveal-delay-1">
+        <div class="avatar" id="avatar-rodrigo">RA</div>
+        <div class="member-info">
+          <div class="member-name">Rodrigo de Araújo Amaro</div>
+          <span class="member-ra">RA 841935</span>
+          <p class="member-role">Desenvolvedor</p>
+        </div>
+      </div>
+      <div class="member-card reveal reveal-delay-2">
+        <div class="avatar" id="avatar-david">DC</div>
+        <div class="member-info">
+          <div class="member-name">David Camara</div>
+          <span class="member-ra">RA 841925</span>
+          <p class="member-role">Desenvolvedor</p>
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <blockquote>
+        "Pensar o mundo contemporâneo é reconhecer sua complexidade — e assumir a responsabilidade de agir com consciência diante dos desafios que nos são apresentados."
+      </blockquote>
+      <cite>— Radar Global, UNAERP 2026/01</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ REFERÊNCIAS — seção 06 -->
+<section class="section referencias" id="referencias">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-label"><span class="label-num">06</span>Referências</p>
+      <h2 class="section-title">Indicações Bibliográficas</h2>
+      <p class="section-sub">Obras, artigos e recursos que embasam as reflexões desenvolvidas pelo grupo.</p>
+    </div>
+    <div class="reveal">
+      <button class="ref-open-btn" id="ref-trigger">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Ver referências bibliográficas</span>
+        <svg class="ref-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-logo">🌐 Radar Global</div>
+  <p class="footer-sub">
+    Trabalho acadêmico · Estudos Contemporâneos · <a href="https://www.unaerp.br" target="_blank" rel="noopener">UNAERP</a> 2026/01<br>
+    Rodrigo de Araújo Amaro (RA 841935) &amp; David Camara (RA 841925)
+  </p>
+</footer>
+
+<!-- ═══════════════════════════════════════════ MODAL REFERÊNCIAS -->
+<div id="ref-modal" class="ref-modal" role="dialog" aria-modal="true" aria-label="Referências bibliográficas">
+  <div class="ref-modal-backdrop" id="ref-modal-backdrop"></div>
+  <div class="ref-modal-card">
+    <div class="ref-modal-header">
+      <div class="ref-modal-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Referências Bibliográficas
+      </div>
+      <button class="ref-modal-close" id="ref-modal-close" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="ref-modal-body">
+      <div class="ref-item"><strong>BAUMAN, Zygmunt.</strong> <em>Globalização: As Consequências Humanas.</em> Rio de Janeiro: Jorge Zahar, 1999.</div>
+      <div class="ref-item"><strong>SACHS, Jeffrey.</strong> <em>The End of Poverty: Economic Possibilities for Our Time.</em> New York: Penguin Press, 2005.</div>
+      <div class="ref-item"><strong>ROSE-ACKERMAN, Susan.</strong> <em>Corruption and Government: Causes, Consequences and Reform.</em> Cambridge: Cambridge University Press, 1999.</div>
+      <div class="ref-item"><strong>ELKINGTON, John.</strong> <em>Cannibals with Forks: The Triple Bottom Line of 21st Century Business.</em> Oxford: Capstone, 1997.</div>
+      <div class="ref-item"><strong>HUNTINGTON, Samuel P.</strong> <em>O Choque de Civilizações e a Recomposição da Ordem Mundial.</em> Rio de Janeiro: Objetiva, 1997.</div>
+      <div class="ref-item"><strong>SEN, Amartya.</strong> <em>Development as Freedom.</em> New York: Anchor Books, 1999.</div>
+      <div class="ref-item"><strong>STIGLITZ, Joseph.</strong> <em>Globalization and Its Discontents.</em> New York: W. W. Norton, 2002.</div>
+      <div class="ref-item"><strong>FURTADO, Celso.</strong> <em>O Mito do Desenvolvimento Econômico.</em> Rio de Janeiro: Paz e Terra, 1974.</div>
+      <div class="ref-item"><strong>IPCC.</strong> <em>Sixth Assessment Report (AR6).</em> Geneva: Intergovernmental Panel on Climate Change, 2021.</div>
+      <div class="ref-item"><strong>ONU.</strong> <em>Transforming Our World: The 2030 Agenda for Sustainable Development.</em> New York: United Nations, 2015.</div>
+      <div class="ref-item"><strong>TRANSPARENCY INTERNATIONAL.</strong> <em>Corruption Perceptions Index 2023.</em> Berlin: TI, 2024. Disponível em: transparency.org</div>
+      <div class="ref-item"><strong>BANCO MUNDIAL.</strong> <em>Poverty and Shared Prosperity 2022.</em> Washington: World Bank Group, 2022.</div>
+      <div class="ref-item"><strong>IANNI, Octavio.</strong> <em>A Era do Globalismo.</em> Rio de Janeiro: Civilização Brasileira, 1996.</div>
+      <div class="ref-item"><strong>DIAMOND, Jared.</strong> <em>Colapso: Como as Sociedades Escolhem o Fracasso ou o Sucesso.</em> São Paulo: Record, 2005.</div>
+    </div>
+  </div>
+</div>
+
+<button id="back-top" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="script.js?v=3"></script>
+</body>
+</html>
