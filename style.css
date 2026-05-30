@@ -1052,6 +1052,19 @@ footer {
 [data-theme="light"] .pick-item:hover {
   background: rgba(255,255,255,0.45);
 }
+.footer-logo-wrap {
+  display: inline-flex;   /* mantém centralização dentro do text-align: center */
+  align-items: center;    /* alinha verticalmente */
+  justify-content: center;/* garante centralização horizontal */
+  gap: 8px;               /* espaço entre ícone e texto */
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
 
 /* ─── RESPONSIVO ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
